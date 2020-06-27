@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title 的個人網站</title>
+    @*<link rel="stylesheet" href="~/Content/css/animate.css" />*@
+    <link rel="stylesheet" href="~/Content/css/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+</head>
+<body>
+    <div class="container navbar">
+        <nav>
+            <div class="lgo">
+                <img src="~/img/logo.png" alt="" width="200"/>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="navbar-items">About Me</a></li>
+                <li><a href="#skills" class="navbar-items">Skills</a></li>
+                <li><a href="#work" class="navbar-items">My Work</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="body-content">
+        @RenderBody()
+        <footer>
+            <hr />
+            <p>&copy; @DateTime.Now.Year Copyright. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/js/TimelineLite.min.js"></script>
+    <script src="~/Scripts/js/TweenMax.min.js"></script>
+    <script src="~/Scripts/js/CSSPlugin.min.js"></script>
+    <script src="~/Scripts/js/script.js"></script>
+    <script src="~/Scripts/js/burger_script.js"></script>
+
+    <script src="~/Scripts/js/ScrollMagic.min.js"></script>
+    <script src="~/Scripts/js/animation.gsap.min.js"></script>
+</body>
+</html>
